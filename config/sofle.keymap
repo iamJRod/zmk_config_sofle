@@ -94,11 +94,13 @@
     };
 };
 
-&rgb_under_glow {
-    compatible = "zmk,rgb-strip";
-    label = "RGB";
-    color-order = "grb";
-    chain-length = <58>;
-    io-channels = <&gpio0 13>;
-    io-channel-names = "RGB_DI";
+/ {
+    rgb_under_glow: rgb_under_glow {
+        compatible = "zmk,rgb-strip";
+        label = "RGB";
+        color-order = "grb";
+        chain-length = <58>;
+        io-channels = <&gpio0 13>;  // Use 17 or 21 if needed
+        io-channel-names = "RGB_DI";
+    };
 };
