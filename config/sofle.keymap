@@ -93,3 +93,12 @@
         };
     };
 };
+
+&rgb_under_glow {
+    compatible = "zmk,rgb-strip";
+    label = "RGB";
+    color-order = "grb";
+    chain-length = <58>;
+    io-channels = <&gpio0 13>;
+    io-channel-names = "RGB_DI";
+};
